@@ -1,0 +1,33 @@
+#define SI 100
+position random_pos();
+int print(int ,int ,const char *,...);
+int type_diag(char);
+char type_diag_rev(int);
+//Read map
+void map(block[SI][SI]  ,FILE*);
+void print_one_block (int ,int ,int );
+void print_map(block[SI][SI]);
+void clear_text();
+void print_cell(position );
+void remove_cell(position ,block[SI][SI]);
+void cell_add(position ,int ,cell_inf **);
+void select_cell(position );
+void show_move_hint();
+int find_cell_pos(position ,cell_inf* );
+int check_block_empty(int ,int ,cell_inf *);
+void move(cell_inf*,block[SI][SI],position ,int ,int );
+void cell_inf_add(cell_inf ,cell_inf **);
+void print_cells(cell_inf * );
+char* show_text_box(char* );
+void play(cell_inf *,block[SI][SI]);
+void insert_cell(cell_inf* ,block[SI][SI]);
+void show_energy(cell_inf * ,int );
+void remove_show_energy();
+void show_inf();
+void show_block_energy(block[SI][SI]);
+void split_cell(block[SI][SI],cell_inf * ,int ,position );
+void boost_energy(block[SI][SI],cell_inf *,int ,position );
+void save_bin(block[SI][SI],cell_inf *,char* );
+char* type_s(int );
+void save_text(block[SI][SI],cell_inf *,char *);
+void cell_load(cell_inf *,FILE* );
